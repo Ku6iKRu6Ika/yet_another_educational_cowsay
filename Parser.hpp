@@ -6,7 +6,7 @@ using std::string;
 
 class Parser {
 
-    string cowsource, cloudsource, message, tongue;
+    string cowsource, cloudsource, message, tongue, sunsource;
     struct Flags {
         bool cowsource = false;
         bool cloudsource = false;
@@ -27,7 +27,7 @@ public:
     string getCow();
     string getCloud();
     char   getFill();
-    char   getSun();
+    string   getSun();
     string getMessage();
     string getTongue();
 };

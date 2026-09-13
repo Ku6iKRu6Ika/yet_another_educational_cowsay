@@ -48,7 +48,9 @@ Parser::Parser(int argc, char *argv[])
             flags.snow = true;
 	else if (tmp == "-ks")
 	{
-            flags.ks = true;
+        arg++;
+        sunsource = argv[arg];
+        flags.ks = true;
 	}
         else if (tmp == "-r")
             flags.rain = true;
@@ -130,14 +132,12 @@ char Parser::getFill()
         return ' ';
 }
 
-char Parser::getSun()
+string Parser::getSun()
 {
     if (flags.ks)
-    {
-	return ')';
-    }
-    else 
-	return ' ';
+        return sunsource;
+    else
+        return "none";
 }
 
 string Parser::getMessage()

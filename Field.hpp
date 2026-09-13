@@ -6,6 +6,7 @@ using std::string;
 
 #include "Cow.hpp"
 #include "Cloud.hpp"
+#include "Sun.hpp"
 class Parser;
 
 class Field {
@@ -13,9 +14,9 @@ class Field {
     string message;
     Cow cow;
     Cloud cloud;
+    Sun sun;
     string tongue;
     char fill;
-    char sun; 
 
 public:
 

@@ -1,5 +1,6 @@
 #include "Field.hpp"
 #include "Parser.hpp"
+#include "Sun.hpp"
 
 #include <iostream>
 using std::cout;
@@ -18,8 +19,11 @@ void Field::print()
     x = cow.getWidth() + cloud.getWidth() / 2 + 20;
     y = cow.getHeight() + cloud.getHeight() + 2;
     
-    cout << ':';
-    cout << sun;
+//    cout << ':';
+//    cout << sun;
+    
+    sun.print(2, fill, x);
+    
     for (int i = 0; i < x; i++)
         cout << fill;
     cout << endl;
